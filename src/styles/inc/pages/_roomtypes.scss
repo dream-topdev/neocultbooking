@@ -1,0 +1,186 @@
+.page-roomtypes {
+  color: $semigray;
+  border-radius: 10px;
+  .panel-title {
+    margin-left: 58px;
+    @include media-breakpoint-down(sm) {
+      font-size: 13px;
+      margin: 8px 0 0 0;
+    }
+  }
+
+  .panel-content {
+    .head-line {
+      font-weight: 600;
+      font-size: 20px;
+    }
+
+    .list {
+      border-left: 6px solid $primary;
+      background: $white;
+      padding: 59px 55px 53px 53px;
+      border-radius: 10px;
+
+      .nothing {
+        text-align: center;
+        font-size: 20px;
+        line-height: 26px;
+      }
+      .room-table {
+        margin-top: 44px;
+        th {
+          font-size: 14px;
+          line-height: 19px;
+          font-weight: 600;
+          height: 45px;
+          padding: 14px 24px;
+          background-color: $notes-background;
+          vertical-align: top;
+          &.w-id {
+            width: 208px;
+          }
+          &.w-name {
+            width: 389px;
+          }
+          &.w-number {
+            width: 286px;
+            text-align: center;
+          }
+          &.w-occupancy {
+            width: 170px;
+            text-align: center;
+          }
+          &:first-child {
+            padding-left: 25px;
+            border-top-left-radius: 22.5px;
+          }
+          &:last-child {
+            border-top-right-radius: 22.5px;
+          }
+        }
+        tr.separator {
+          vertical-align: top;
+          &.before {
+            height: 12px;
+            box-shadow: 0 -1px 0 $panel-lines-light-color;
+          }
+          &.after {
+            height: 12px;
+          }
+        }
+        tbody:first-of-type tr.separator.before {
+          box-shadow: none;
+        }
+        td {
+          font-size: 14px;
+          padding: 0 24px;
+          line-height: 25px;
+          &:first-child {
+            padding-left: 28px;
+          }
+          &:last-child {
+            padding: 0 24px 0 0;
+          }
+          .numbers {
+            // margin-left: 20px;
+            text-align: center;
+          }
+          svg {
+            font-size: 22px;
+            margin-left: 25px;
+            color: $notes-light-color;
+            &:nth-child(3) {
+              color: $panel-lines-dark-color;
+            }
+          }
+        }
+
+        p {
+          margin: 0;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .add-new-room {
+      font-size: 15px;
+      background: $notes-background;
+      border: none;
+      margin: 13px 0 23px;
+      display: flex;
+      align-items: center;
+      svg {
+        margin-right: 12px;
+      }
+      &:hover {
+        color: $semigray;
+      }
+    }
+    .description {
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    .list-item {
+      font-size: 14px;
+      line-height: 24px;
+      .row-card{
+        border-bottom: 1px solid $panel-lines-light-color;
+        padding-bottom: 23px;
+        .wrap-1 {
+          margin-top: 25px;
+        }
+        .wrap-2, .wrap-4 {
+          color: $semigray;
+          font-size: 15px;
+        }
+        .wrap-3 {
+          margin: 41px 0 0 2px;
+        }
+        .w-id {
+          width: 137px;
+        }
+        .w-number {
+          width: 83px;
+        }
+      }
+      p {
+        margin: 0;
+      }
+      .label {
+        font-weight: 600;
+        font-size: 14px;
+        padding: 0;
+        color: $semigray;
+      }
+      .small {
+        font-size: 12px;
+      }
+      .nothing {
+        text-align: center;
+        font-size: 14px;
+        line-height: 24px;
+        padding: 60px 0 35px;
+      }
+      .nr {
+        // flex: 0 0 45px;
+        white-space: nowrap;
+      }
+      .dots {
+        color: $dropdown-icon-color;
+        flex: 0 0 50px;
+        text-align: right;
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      box-shadow: none;
+      margin-top: 22px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+      padding: 12px 28px 0 25px;
+      background: $white;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.17);
+      border-radius: 25px;
+  }
+}

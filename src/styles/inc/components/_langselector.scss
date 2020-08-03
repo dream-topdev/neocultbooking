@@ -1,0 +1,43 @@
+.lang-selector {
+  display: flex;
+  justify-content: space-between;
+  button {
+    svg {
+      margin: 0 3px 1px 0;
+    }
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+  .lang-list {
+    display: flex;
+    height: 45px;
+    .lang-item {
+      cursor: pointer;
+      color: $semigray;
+      font-size: 14px;
+      font-weight: 600;
+      height: 45px;
+      border-bottom: 3px solid $langs-indicator;
+      padding: 0 12px 0 16px;
+      line-height: 45px;
+      > svg {
+        margin: 0 2px 0 6px;
+        color: $langs-icon-color;
+      }
+      &.selected {
+        //> svg {
+        //  margin: 0 0 0 5px;
+        //}
+        color: $primary;
+        border-bottom-color: $langs-selected-indicator;
+      }
+      &.valid {
+        > svg {
+          margin: 0 0 0 4px;
+          color: $langs-selected-icon-color;
+        }
+      }
+    }
+  }
+}
